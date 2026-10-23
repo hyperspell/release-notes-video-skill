@@ -28,7 +28,7 @@ Your update notes, product visuals, brand assets and an agent with file and brow
 | [FFmpeg](https://ffmpeg.org/) / ffprobe | Mix, encode, extract frames and check exports |
 | [ElevenLabs](https://elevenlabs.io/docs/overview/capabilities/sound-effects) | Makes extra sound effects when a shot needs them |
 
-The [tool guide](skills/release-notes-video/references/tools.md) explains setup and how the pieces fit together, including the `dreamina-canvas` CLI when installed. Blender and extra sound effects are used where the storyboard calls for them. The main composition renderer is built in your video project; the helper scripts here handle setup, inspection and delivery.
+The [tool guide](skills/release-notes-video/references/tools.md) explains setup and how the pieces fit together, including the `dreamina-canvas` CLI when installed. Blender and extra sound effects are used where the storyboard calls for them. Your agent authors the episode's composition; the included helpers handle timing, frame capture, mastering, checks and delivery.
 
 The optional scripts need Python 3.10+ and FFmpeg/ffprobe. Contact sheets also need Pillow; the examples below use [uv](https://docs.astral.sh/uv/) to supply it. If you've installed Pillow yourself, omit `uv run --with pillow`.
 
@@ -46,7 +46,9 @@ python3 "$SKILL/scripts/build_posting_kit.py" episodes/sample-week/kit.json --ou
 
 `new_episode.py` sets up the episode folders and planning files. Fill in `kit.json` with your clips and copy, then use `build_posting_kit.py` to package them as an offline HTML page and a ZIP. The page includes Copy and Download buttons.
 
-To check the helper scripts, run `uv run --with pillow python3 -m unittest discover -s tests` from the repository root.
+For the full workflow, see [Production helpers](skills/release-notes-video/references/production-helpers.md): beat and vocal analysis, lyric alignment, frame rendering, silent demos, gain-only mastering, flicker detection and archive checksums. The [genre bank](skills/release-notes-video/references/genre-bank.md) has 29 detailed musical directions.
+
+Run all Python checks with `uv run --with pillow --with librosa --with soundfile python3 -m unittest discover -s tests`. Renderer checks use `npm install`, `npx playwright install chromium`, then `npm run test:render`. Tests use synthetic media and local pages.
 
 ## For public feeds and internal all-hands
 

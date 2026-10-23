@@ -2,6 +2,8 @@
 
 Use song time as the common clock for captions, product actions, animation, sound effects and cuts. A caption timeline is data; it should not be a second, manually drifting edit.
 
+Use the included `analyze_audio.py` and `align_lyrics.py` to produce inspectable timing data and a report that distinguishes measured words from interpolation. Commands, evidence schemas and overrides are in [Production helpers](production-helpers.md). The alignment gate fails until unresolved words are addressed; a complete-looking JSON file is not proof of accurate sync.
+
 ## Establish the timing data
 
 1. Retain the selected original and make the approved working trim/fade.
@@ -46,7 +48,7 @@ Store a simple inspectable representation in the episode project, for example:
 }
 ```
 
-This is an illustrative schema, not a required renderer API. Keep overrides explicit and preserve their reasons. Count the sung words and account for every one; do not fill missing alignment with an invisible guess.
+This is an illustrative composition structure. The alignment helper's actual output contract is documented in [Production helpers](production-helpers.md); adapt that data explicitly to the episode's composition. Keep overrides explicit and preserve their reasons. Count the sung words and account for every one; do not fill missing alignment with an invisible guess.
 
 ## Caption behavior
 

@@ -1,0 +1,11 @@
+{
+  "name": "release-notes-video-skill",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:render": "node --test tests/test_render.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1"
+  }
+}

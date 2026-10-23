@@ -93,6 +93,8 @@ Send the user the top two alongside the audio-review ranking: a table of the num
 
 Use the service's supported export path, obtain the selected take at production quality (WAV where available), retain the original and record its take identifier, source, duration, trim point and any licensed-use information the user provides. Do not copy cookies or session values into shared notes or package them with the skill.
 
+In Suno, use the song's Download menu and wait for the file to finish before navigating away. A browser's multiple-download prompt can stall the remaining candidates. Use the exported file rather than a player-stream URL. Copy required upload inputs into the browser tool's allowed workspace when its file picker cannot read the original location.
+
 Prefer a clean trim and musical fade after the final sung line. Trim on a bar line about one bar after the last sung word and fade over that last bar, then update the timing data's duration to match:
 
 ```bash

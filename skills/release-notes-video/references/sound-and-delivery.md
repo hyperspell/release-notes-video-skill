@@ -12,6 +12,8 @@ For feed video, a useful starting target is about −14 LUFS integrated with tru
 
 Retain the source, working mix and edit recipe separately. Record trim start/end, fade start/duration, any effect cues and the applied gain.
 
+Use `master_audio.py` for the gain-only delivery pass. It copies the picture, rejects mismatched ending durations and remeasures the encoded AAC. Commands are in [Production helpers](production-helpers.md).
+
 ## Export and review
 
 Use native dimensions for the chosen frame, H.264 at about CRF 18, yuv420p and a constant frame rate agreed for the project; 24 fps is a useful default. Copy the rendered picture untouched when muxing the final audio. A high-quality review should be the same file that would be posted, not a low-resolution proxy; reviewers notice low-resolution clips. AAC at 256 kbps and MP4 faststart are reasonable distribution defaults. As a size reference, a two-minute 1080×1350 master came out at about 58 MB.
@@ -34,6 +36,8 @@ After the user approves a review, copy that exact file to a stable final name an
 When requested, make short silent demonstrations, typically six to nine seconds each. These are product explanations, not cropped music-video excerpts. Strip the audio stream entirely. Use ordinary fictional data and remove music-video-only jokes when they distract from the explanation; for example, show the product's real stock settings rather than a joke setting from the music video.
 
 Show the product doing one useful thing, hold the update's plain feature sentence along the bottom, push in on the detail that proves the claim so it reads on a phone, and hold the result. Silent demos are usually 0.2–1.2 MB each. One release may have several capability demos. Do not describe them as distinct launches if they are not.
+
+Render each standalone demo page with the included `render.mjs`; its output has no audio stream. See [Production helpers](production-helpers.md) for full and partial render commands.
 
 ## Portable posting kit
 
@@ -72,5 +76,7 @@ Internal posting caveats belong only in a kit for the approved poster. A forward
 Keep code, generic templates and reusable instructions separate from episode media and organizational evidence. Store source recordings, alternatives worth keeping, generated originals, timing data, export recipes, final masters and posting kits in the user's chosen private archive.
 
 Use a checksum manifest and preserve relative paths. Verify uploads by readback before moving scratch to the Trash. A restore guide should identify the selected take, active composition, required fonts/tools and commands needed to rebuild without historical review folders. Do not promise that re-encoding will reproduce identical compressed bytes; keep the approved final export too.
+
+Use `asset_manifest.py` to inventory the archive and verify a downloaded/restored copy. For Drive, use the user's connected Drive tools or configured CLI and preserve the existing sharing settings. Skip unchanged files when resuming; retain changed assets as revisions where supported. Split archives to fit the actual upload limit, keeping packs independently extractable and preserving relative paths. Keep useful candidate songs and originals; omit regenerable frame dumps and draft renders. Record the remote file locations with the episode, and promote reusable sets/props only when authorized.
 
 Promote reusable character/set assets only when their reuse is authorized. Keep private reference photos and team feedback out of a public skill export. Archive sharing and repository commits are separate from delivering the video and need the user's authorization.

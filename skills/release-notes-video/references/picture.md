@@ -45,6 +45,7 @@ Some jokes will be niche to some viewers. The answer is density: enough jokes an
 - Keep application geometry stable across consecutive shots: the same window, size and position, with only the contents changing. Cutting from a lone sidebar to the full window made the sidebar jump in width and left a black band.
 - Indicators, menus and text belong inside their real containers, where the real app puts them; a typing indicator goes under the composer, not under the window. Nothing overflows its container; check every list for overflow, wrapping and kerning.
 - Draw borders on whole pixels and do not animate scale on hairlines, or window edges flicker.
+- Use the product's actual SVG/icon assets at their intended dimensions. A Unicode checkmark can inherit a text line height and overflow a small badge.
 - Captions sit on dark ground. White captions over a white UI are unreadable, so reframe to leave a dark band.
 - Feature sentences never cover UI headers, title bars or labels. Move or retime them.
 - The cursor does the action on the sung word: it clicks the button on the line that names the decision, and the button flips to its done state.
@@ -54,6 +55,8 @@ Some jokes will be niche to some viewers. The answer is density: enough jokes an
 To get pixel-faithful product pages with fake data, build them from the product's own component markup, class names and stylesheets, filled with fictional copy, rather than restyling screenshots. If you start from a saved copy of a live page, keep that raw snapshot private and out of version control, strip it to the chrome only (no names, emails, avatars or scripts), and search the result for `@`, real names and `<script` before it goes anywhere. Remove navigation for features that are not available to the video's audience.
 
 Before sending any capture to an external tool, check the complete image, including browser chrome, avatars, sidebars and notifications. Keep raw captures in private local storage. Shared templates and examples must not contain hidden production text, identifiers or scripts.
+
+Retain the approved CSS, fonts and image assets with the sanitized capture, preserving relative paths. Deployed content-hash filenames can change later. Wait for fonts and images before taking screenshots, and check the saved page offline so a later deploy cannot change the approved render.
 
 ## Text hierarchy
 
@@ -83,6 +86,8 @@ Ask for the camera, action, framing, lighting and final composition in the promp
 - **Stills.** Edits tend to keep the input's camera angle. For a precise fix, mask one region per call and composite only that region back. If a large requested change (a whole outfit) does nothing, say that the change is required and must be clearly visible.
 - **Clips.** Generate each clip from its own first-frame still, in parallel, rather than chaining one clip's last frame into the next. Use the full-quality model for finals; cheaper variants tend to drift faces, garble text and ad-lib dialogue. If a clip cannot be cropped to the final ratio without losing its subject, regenerate it in a portrait ratio rather than cropping. Lip-sync is a hero-shot tool, not a default.
 - **Cost.** Inspect the current tool's resolution choices and price before quoting a batch. A lower-cost resolution can be appropriate for brief cutaways, with the higher one kept for hero shots; review the actual result at final size, because low-resolution clips look soft in a 1080-pixel master. Do not assume a historical credit rate or model identifier is still valid. Preserve job IDs and completed originals so an interrupted run can resume without regenerating paid work.
+
+For a lip-sync hero shot, use the exact vocal-stem slice for that shot with a Dreamina mode that accepts the required audio/video references. Discover the supported mode first, quote the complete input, and inspect the mouth timing. Keep the approved song as the final soundtrack; generated dialogue must not replace it.
 
 Use camera moves, editing and light to express the genre. Avoid accidental distortions, mirrored faces and melted objects. Intentional absurdity should have a clear gag or visual premise. A directed crowd pullback can be funny; a generic concert inserted everywhere is filler. Choose props and behavior that fit the genre; a logo and robots at a generic concert do not communicate a specific musical world.
 

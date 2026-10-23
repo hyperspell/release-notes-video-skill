@@ -18,6 +18,8 @@ Keep artist/song names out of a generation prompt when the service disallows the
 
 ## Starting directions
 
+Read the [full genre bank](genre-bank.md) when pitching: it has 29 directions, each with production details, a visual world, type/UI treatment, a format joke, a use case and pitfalls. The shorter list below includes additional starting points.
+
 These are prompts for taste, not fixed scripts or claims about model capabilities:
 
 | Musical direction | Sound and world | Useful for |
@@ -36,6 +38,15 @@ These are prompts for taste, not fixed scripts or claims about model capabilitie
 ## Build an episode, not a mood board
 
 Keep a private history of genres and structural devices. Avoid repeating the recent musical family or rebuilding the same cold open with a different costume. A small callback can reward repeat viewers without becoming the whole structure.
+
+Compare the last three episodes by tempo band, era, vocal type and energy before pitching. Check the calendar for a seasonal or topical angle. If a genre buries words, use dry spoken update lines over the beat or skip it. Match form to the story: patter and request-show formats handle several short updates; a ballad, spy theme or breakdown/drop can carry one headline; an instructional format helps explain a workflow.
+
+Keep a project-level `genres/used.md` outside the shared skill and update it after delivery. Start with this blank table; keep actual episode history private unless the user chooses to share it:
+
+| Date | Episode | Genre | Tempo / vocal / energy | Structural devices | Callbacks and easter eggs |
+|---|---|---|---|---|---|
+
+Commit to the format rather than stepping outside it to explain the joke. Plain capability copy carries the explanation. Keep musical settings, narrator/set references, fonts, clip style, transitions and sound cues consistent with that choice.
 
 The opening should establish the update's context and give the viewer something striking in the first seconds. Do not spend a quarter of a short video explaining an unfamiliar mascot. A recognizable musical reference, a clear problem and one absurd image can do the job together.
 

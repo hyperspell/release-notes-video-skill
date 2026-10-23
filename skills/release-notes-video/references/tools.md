@@ -90,6 +90,8 @@ Use Playwright to capture the real product or source-faithful HTML with fictiona
 
 Build the main composition in the video project with JavaScript and HTML Canvas. Use a single song-time clock: seeking to time `t` must reproduce the same frame, including clips, camera moves, captions and UI state. Load fonts and media before capture; explicitly seek video clips and seed any procedural randomness. Use Playwright to capture the frames, then FFmpeg to encode them and mux the soundtrack. Keep audio processing separate from picture rendering.
 
+The included `render.mjs` handles frame capture, stills, cut-list checks and silent picture encoding; `master_audio.py` handles the duration-checked audio mux. See [Production helpers](production-helpers.md) for the page contract and commands. The episode still supplies its own artwork, product components and shot choreography.
+
 Blender renders and Seedance originals are inputs to this timeline. Draw exact product text, feature sentences and lyrics after visual effects so they stay crisp. Preserve the composition code, timing data, assets and dependency lock. An existing editor can replace this rendering route when the user chooses one, while keeping the same timing and delivery checks.
 
 ## Sync, effects and delivery

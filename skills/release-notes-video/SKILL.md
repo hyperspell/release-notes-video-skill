@@ -40,10 +40,10 @@ Use the following sequence, adapting to the tools and approvals already availabl
 2. **Choose a musical world.** Pitch three distinct directions with a recognizable reference, precise sound, opening image, narrator and format joke. Let the user choose. Read [Genre and story](references/genre-and-story.md).
 3. **Lock the lyrics.** Draft a short complete song with specific details, a memorable hook and jokes that serve the update. Show where each claim comes from. Resolve edits before generating a batch in Suno. Lyrics and take selection: [Song](references/song.md).
 4. **Generate and compare takes.** With the authorized budget, use Suno to make meaningfully different arrangements and vocal approaches. Have the latest available audio-capable Gemini model compare the complete recordings together when access and permission allow it; without Gemini access, use another model that can hear several full recordings in one request. Verify availability rather than inventing a model name. The user's selection overrides the recommendation.
-5. **Build timing data.** Retain the chosen original, record any trim/fade, align sung words and establish the beat grid. Read [Sync](references/sync.md).
+5. **Build timing data.** Retain the chosen original, record any trim/fade, align sung words and establish the beat grid. Read [Sync](references/sync.md) and use the included [production helpers](references/production-helpers.md) for beat/onset analysis and alignment. Inspect every unresolved word before accepting the timeline.
 6. **Plan and build the picture.** Storyboard the entire timeline before filling it with animation. Capture product demonstrations with Playwright, generate first-frame stills, and animate selected shots with Dreamina/Seedance. Use Blender for shots that need controlled 3D geometry or camera motion, either as final renders or motion references. Build the product explanation first, then add the genre world, approved characters and intentional visual absurdity. Read [Picture](references/picture.md).
 7. **Mix, render and inspect.** Use quiet, purposeful sound effects. Check every cut, caption, reading hold and clip boundary, then export a full-quality review. Read [Sound and delivery](references/sound-and-delivery.md) and [QA](references/qa.md).
-8. **Revise and deliver.** Address feedback without altering the locked song unnecessarily. After approval, promote the approved bytes to a stable final filename. Make standalone silent product demos and a posting kit if requested. Record the source inventory and verify the archive before cleanup.
+8. **Revise and deliver.** Address feedback without altering the locked song unnecessarily. After approval, promote the approved bytes to a stable final filename. Make standalone silent product demos and a posting kit if requested. Record the source inventory and verify the archive before cleanup. Update the private genre/device history and save reusable lessons in the relevant reference without importing private feedback transcripts.
 
 Do not proceed past an unresolved story, genre, lyric or song decision that requires the user's choice. Once a decision is made, continue within the approved scope without asking again. Internal distribution and public posting remain separate choices.
 
@@ -57,5 +57,11 @@ All included scripts operate locally and require no service credentials:
 | `scripts/inspect_media.py` | Report streams/dimensions/duration and validate a silent clip or expected export |
 | `scripts/contact_sheet.py` | Make a timestamped contact sheet using FFmpeg and Pillow |
 | `scripts/build_posting_kit.py` | Build an offline HTML kit and ZIP with original silent demo clips |
+| `scripts/analyze_audio.py` | Fit the kick-aligned beat grid or measure a vocal onset/envelope |
+| `scripts/align_lyrics.py` | Align the sung sheet, preserve timing evidence and flag unresolved words |
+| `scripts/render.mjs` | Capture an episode's composition at exact song times; render stills, silent pictures and demos |
+| `scripts/master_audio.py` | Copy the picture and mux a duration-matched soundtrack using measured plain gain |
+| `scripts/flicker.py` | Flag spatial blips, dips and pulses missed by sparse contact sheets |
+| `scripts/asset_manifest.py` | Create and verify a checksum inventory for a restored episode archive |
 
-The helpers do not create the music or render the main video. Build the episode's composition with HTML Canvas and Playwright, then encode and mux with FFmpeg; use another editor when the user chooses it. Preserve the timing model and source assets so another agent can rebuild the episode.
+The agent authors the episode's composition with HTML Canvas and Playwright; the included renderer captures it and FFmpeg encodes/muxes the result. Commands and input/output contracts are in [Production helpers](references/production-helpers.md). Use another editor when the user chooses it. Preserve the timing model and source assets so another agent can rebuild the episode.
