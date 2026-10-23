@@ -74,6 +74,8 @@ Opening and closing branding should use the user's approved wordmark when availa
 
 ## Animation and cinematography
 
+Use OpenAI image generation for character references and first frames, Dreamina/Seedance for generated motion, and Blender for controlled 3D shots or clay camera references. The setup, job lifecycle and Blender rendering workflow are in [Tools and setup](tools.md). Capture product demonstrations with Playwright and compose exact text separately from generated footage.
+
 Generate motion where it adds something a still cannot. Use approved source stills and consistent character references. Compose for the final aspect ratio before paying for clips. Match shot length to the source clip; a clip that runs out and freezes on its final frame is a bug.
 
 Ask for the camera, action, framing, lighting and final composition in the prompt. Avoid generating important UI text in a model; render that text deterministically. A style line such as "No text, no captions, no subtitles, no speech, no singing, no lip-sync, no new logos" prevents most unwanted additions; add "no religious or occult symbols" to anything ritual-looking. Check hands, faces, props and logos for unintended changes.

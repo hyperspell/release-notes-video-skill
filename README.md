@@ -14,10 +14,21 @@ You can point your agent directly at the skill file, or install it by copying th
 
 ## What you need
 
-- An agent with file access and tools for making and editing media.
-- Your update notes, product visuals and any brand assets you want to use.
-- A music-generation service or an original recording.
-- A video editor or renderer. This repo provides instructions and helper scripts; you'll need your own editing tools.
+Your update notes, product visuals, brand assets and an agent with file and browser access. The production stack is:
+
+| Tool | What it does |
+|---|---|
+| [Suno](https://suno.com/) | Generates the song from your lyrics and style prompts |
+| [Gemini](https://ai.google.dev/gemini-api/docs/audio) | Listens to the full song options together and ranks them against the brief |
+| [OpenAI image generation](https://developers.openai.com/api/docs/guides/image-generation) | Makes and edits character references and first-frame stills |
+| [Dreamina / Seedance](https://dreamina.capcut.com/ai-video/image-to-video) | Animates those stills into directed shots |
+| [Blender](https://www.blender.org/) | Builds 3D sets, props and camera moves; also makes motion references for Seedance |
+| [Playwright](https://playwright.dev/) + HTML Canvas | Captures product demos and renders timed typography and the final composition |
+| Demucs, Whisper and librosa | Separate vocals and establish word timing and the beat grid |
+| [FFmpeg](https://ffmpeg.org/) / ffprobe | Mix, encode, extract frames and check exports |
+| [ElevenLabs](https://elevenlabs.io/docs/overview/capabilities/sound-effects) | Makes extra sound effects when a shot needs them |
+
+The [tool guide](skills/release-notes-video/references/tools.md) explains setup and how the pieces fit together, including the `dreamina-canvas` CLI when installed. Blender and extra sound effects are used where the storyboard calls for them. The main composition renderer is built in your video project; the helper scripts here handle setup, inspection and delivery.
 
 The optional scripts need Python 3.10+ and FFmpeg/ffprobe. Contact sheets also need Pillow; the examples below use [uv](https://docs.astral.sh/uv/) to supply it. If you've installed Pillow yourself, omit `uv run --with pillow`.
 

@@ -1,13 +1,13 @@
 ---
 name: release-notes-video
-description: Turn release notes or a weekly internal update into an original music video. Use to plan the story and genre, write lyrics, compare song takes, synchronize captions, build product demonstrations and animation, edit a short video, or prepare silent clips and a posting kit. Works with the user's available media tools and accounts.
+description: Make release-notes or weekly-update music videos using Suno, Gemini audio review, Dreamina/Seedance animation, Blender and a timed video composition. Use to plan an episode, write lyrics, compare takes, sync captions, build product demos, edit the video or prepare silent clips and a posting kit.
 ---
 
 # Release notes music video
 
 Make a video people want to watch that also makes the update unmistakable. The genre defines the music, visual world, typography and editing. Real demonstrations carry the explanation; the song and visual jokes make it memorable.
 
-This skill is self-contained guidance plus optional local utilities. It does not assume another repository's renderer, private examples, account profiles or media library. Use the current host's tools, or create inspectable episode-specific code when the workflow needs it.
+Use Suno for music, Gemini to compare recordings, OpenAI image generation for stills, Dreamina/Seedance for animation, Blender for 3D and camera control, Playwright with HTML Canvas for product capture and composition, Demucs/Whisper/librosa for sync, and FFmpeg for mixing and delivery. Add ElevenLabs effects when needed. Read [Tools and setup](references/tools.md) before production; it explains the handoffs and the Dreamina CLI workflow. If a tool is unavailable, explain the missing capability and agree on a substitute rather than silently dropping it.
 
 ## Establish the brief
 
@@ -38,10 +38,10 @@ Use the following sequence, adapting to the tools and approvals already availabl
 
 1. **Choose the story.** Verify the source window and status of each candidate. Favor one meaningful headline with supporting capabilities, or a small set of substantive updates. Present the proposed story for approval before locking it. Read [Brief and copy](references/brief-and-copy.md).
 2. **Choose a musical world.** Pitch three distinct directions with a recognizable reference, precise sound, opening image, narrator and format joke. Let the user choose. Read [Genre and story](references/genre-and-story.md).
-3. **Lock the lyrics.** Draft a short complete song with specific details, a memorable hook and jokes that serve the update. Show where each claim comes from. Resolve edits before generating a batch. Lyrics and take selection: [Song](references/song.md).
-4. **Generate and compare takes.** With the authorized budget, make meaningfully different arrangements and vocal approaches. Have the latest available audio-capable Gemini model compare the complete recordings together when access and permission allow it; without Gemini access, use another model that can hear several full recordings in one request. Verify availability rather than inventing a model name. The user's selection overrides the recommendation.
+3. **Lock the lyrics.** Draft a short complete song with specific details, a memorable hook and jokes that serve the update. Show where each claim comes from. Resolve edits before generating a batch in Suno. Lyrics and take selection: [Song](references/song.md).
+4. **Generate and compare takes.** With the authorized budget, use Suno to make meaningfully different arrangements and vocal approaches. Have the latest available audio-capable Gemini model compare the complete recordings together when access and permission allow it; without Gemini access, use another model that can hear several full recordings in one request. Verify availability rather than inventing a model name. The user's selection overrides the recommendation.
 5. **Build timing data.** Retain the chosen original, record any trim/fade, align sung words and establish the beat grid. Read [Sync](references/sync.md).
-6. **Plan and build the picture.** Storyboard the entire timeline before filling it with animation. Build the product explanation first, then add the genre world, approved characters and intentional visual absurdity. Read [Picture](references/picture.md).
+6. **Plan and build the picture.** Storyboard the entire timeline before filling it with animation. Capture product demonstrations with Playwright, generate first-frame stills, and animate selected shots with Dreamina/Seedance. Use Blender for shots that need controlled 3D geometry or camera motion, either as final renders or motion references. Build the product explanation first, then add the genre world, approved characters and intentional visual absurdity. Read [Picture](references/picture.md).
 7. **Mix, render and inspect.** Use quiet, purposeful sound effects. Check every cut, caption, reading hold and clip boundary, then export a full-quality review. Read [Sound and delivery](references/sound-and-delivery.md) and [QA](references/qa.md).
 8. **Revise and deliver.** Address feedback without altering the locked song unnecessarily. After approval, promote the approved bytes to a stable final filename. Make standalone silent product demos and a posting kit if requested. Record the source inventory and verify the archive before cleanup.
 
@@ -58,4 +58,4 @@ All included scripts operate locally and require no service credentials:
 | `scripts/contact_sheet.py` | Make a timestamped contact sheet using FFmpeg and Pillow |
 | `scripts/build_posting_kit.py` | Build an offline HTML kit and ZIP with original silent demo clips |
 
-The helpers do not create the music or render the main video. Use the available editor, composition framework or native media tools. Preserve the timing model and source assets so another agent can rebuild the episode.
+The helpers do not create the music or render the main video. Build the episode's composition with HTML Canvas and Playwright, then encode and mux with FFmpeg; use another editor when the user chooses it. Preserve the timing model and source assets so another agent can rebuild the episode.

@@ -26,7 +26,7 @@ A shape that worked for a short episode: an intro that names the frame, a verse 
 
 Draft with a source note for every line (line, update, source, syllables), and show the user the complete sheet with a table of where each update lands. Expect several rounds. After the user locks lyrics, preserve them exactly except for approved pronunciation spellings. Save each version and the locked sheet in the private episode folder.
 
-## Writing for a generation service
+## Writing for Suno
 
 Verify the current editor's behavior; these held for Suno in late 2026 and may apply to similar services:
 
@@ -38,7 +38,7 @@ Verify the current editor's behavior; these held for Suno in late 2026 and may a
 
 ## Generate varied candidates
 
-Use the user's chosen music service and account. Confirm the allowed spend and number of candidates when they have not already been authorized. Check the service's terms on automated use; if they restrict it, the user drives the interface. Verify the current controls, export options and usage terms rather than promising that a particular plan or download grants a particular right. Budget downloads separately from generation when the service limits exports. Check commercial-use eligibility under the applicable plan and terms rather than treating download or subscription status as a universal licensing rule.
+Use Suno Custom mode in the user's signed-in account: paste the locked lyrics, enter the style and exclude prompts, and keep instrumental mode off. See [Tools and setup](tools.md) for the production stack. Use another music service when the user chooses it. Confirm the allowed spend and number of candidates when they have not already been authorized. Check the service's terms on automated use; if they restrict it, the user drives the interface. Verify the current controls, export options and usage terms rather than promising that a particular plan or download grants a particular right. Budget downloads separately from generation when the service limits exports. Check commercial-use eligibility under the applicable plan and terms rather than treating download or subscription status as a universal licensing rule.
 
 Make roughly four to six takes across two or three meaningfully different seeds when that fits the budget, for example two takes per seed. Vary arrangement, energy, production or vocal delivery within the approved direction. Small tempo, key or wording changes that produce essentially the same performance do not count as diversity. Apply feedback about arrangement, vocal delivery and emotional energy while keeping the locked lyrics.
 

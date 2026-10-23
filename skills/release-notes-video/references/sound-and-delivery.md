@@ -2,6 +2,8 @@
 
 ## Sound
 
+Use ElevenLabs Sound Effects for new cues and FFmpeg for the mix and final mux. Reuse existing effects where they fit. Tool setup and the composition handoff are in [Tools and setup](tools.md).
+
 Preserve the selected song. Apart from approved trim/fade, plain loudness gain and quiet effects, do not add processing without permission. Avoid silently repairing a mix with EQ, compression or a limiter; listeners notice ("did you do something to the audio?"). Pushing spoken verses up from the vocal stem can help on phone speakers, but offer it only as an A/B the user chooses.
 
 Anchor effects to the action or sung word, the same way graphics are anchored, so sound and picture move together when the take changes. Keep a small reusable effects library and add genre-specific effects to it. Keep effects well below the song: reviewers repeatedly found them too loud, including a gag at −12 dB. A useful starting point is comic effects at −18 dB or lower relative to the song before any overall trim, with UI ticks and pops lower still. A quiet click may carry a product interaction better than another loud comic effect. Review the effect's peak against the same musical span; the gain value alone does not tell you whether it dominates.
