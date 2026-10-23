@@ -1,0 +1,18 @@
+# Episode work belongs in the producer's project, not in this skill distribution.
+# Unanchored so an episode accidentally created inside the skill directory is also ignored.
+episodes/
+output/
+outputs/
+scratch/
+local/
+.keys
+.keys/
+.env
+.env.*
+!.env.example
+*credentials*.json
+*token*.json
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
